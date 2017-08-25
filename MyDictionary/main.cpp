@@ -89,7 +89,7 @@ int main()
 
 int zaladujSlownik (Slownik l[])
 {
-    int nrLinii = 1;
+    int nr_linii = 1;
     int j = 0;
     string linia;
     fstream plik ;
@@ -97,15 +97,15 @@ int zaladujSlownik (Slownik l[])
 
     while (getline (plik , linia))
     {
-       switch (nrLinii)
+       switch (nr_linii)
        {
            case 1: l[j].wyraz = linia;          break;
            case 2: l[j].tlumaczenie = linia ;   break;
        };    // switch case
 
-       if (nrLinii == 2) {nrLinii = 0; j++;}
+       if (nr_linii == 2) {nr_linii = 0; j++;} // Cala petla wykonuje sie prawidlowoa ilosc razy
 
-       nrLinii++ ;
+       nr_linii++ ;
     } // while
 
     plik.close () ;
@@ -140,6 +140,7 @@ int dodajSlowo(Slownik l[], int n, string s)
                     zmienNumeracje(l,i,n);
                     l[i].wyraz = s;
                     l[i].tlumaczenie = tlumaczenieSlowa;
+                    i=n+1;
                 } // if
                 else if (l[i].wyraz[j]==s[j])
                 {
@@ -232,7 +233,6 @@ void zapiszSlownik (Slownik l[], int n)
 void exportujSlownik (Slownik l[], int n)
 {
     fstream notatnik;
-    string nazwa;
     notatnik.open("Moj slownik.txt", ios::out);
     if (notatnik.good())
     {

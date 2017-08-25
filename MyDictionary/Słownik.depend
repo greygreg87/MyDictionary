@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1501754776 source:g:\multimedia\1) dokumenty\4) programy\3) code blocks\przysz造 programista\2017.08.03 - s這wnik\s這wnik\main.cpp
+	<iostream>
+	<stdio.h>
+	<windows.h>
+
+1501839218 source:g:\multimedia\1) dokumenty\4) programy\3) code blocks\przysz造 programista\2017.08.03 - s這wnik\main.cpp
+	<iostream>
+	<stdio.h>
+	<cstdlib>
+	<conio.h>
+	<windows.h>
+	<fstream>
+	<algorithm>
+	<string>
+
